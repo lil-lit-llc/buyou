@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { GridLoader } from "react-spinners";
 
 function RedirectToHome() {
   const navigate = useNavigate();
@@ -7,7 +8,11 @@ function RedirectToHome() {
     navigate("/home.html");
     window.location.reload();
   }, [navigate]);
-  return <><p>redirect</p></>;
+  return (
+    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
+      <GridLoader color="#7444C0" size={50} />
+    </div>
+  )
 }
 function App() {
   return (

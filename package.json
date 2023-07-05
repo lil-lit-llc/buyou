@@ -9,7 +9,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^6.14.1",
-    "react-scripts": "3.4.0"
+    "react-scripts": "^5.0.1",
+    "react-spinners": "^0.13.8"
   },
   "scripts": {
     "start": "react-scripts start",
