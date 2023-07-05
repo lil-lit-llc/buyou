@@ -1,15 +1,21 @@
 import React, {useEffect} from 'react';
-import { useNavigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 
-function App() {
+function RedirectToHome() {
   const navigate = useNavigate();
   useEffect(() => {
     navigate("/home.html");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
+    window.location.reload();
+  }, [navigate]);
+  return <><p>redirect</p></>;
+}
+function App() {
   return (
-    <></>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/*" element={<RedirectToHome />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
