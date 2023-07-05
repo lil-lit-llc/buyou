@@ -1,8 +1,15 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Home from './Home';
 
 function App() {
-  const value = 'World';
-  return <div>Hello {value}</div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/*" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
